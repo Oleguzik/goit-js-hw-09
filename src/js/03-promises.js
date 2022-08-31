@@ -22,11 +22,11 @@ function onPromiseFormSubmit(e) {
   const numOfPromises = amount.value;
   const initialDelay = delay.value;
   const additionalDelay = step.value;
-  console.log(numOfPromises);
+  // console.log(numOfPromises);
 
   for (let i = 0; i < numOfPromises; i += 1) {
     const promiseDelay = initialDelay * 1 + i * additionalDelay;
-    console.log(`Creating promise #${i + 1} with delay ${promiseDelay}`);
+    // console.log(`Creating promise #${i + 1} with delay ${promiseDelay}`);
     createPromise(i + 1, promiseDelay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
