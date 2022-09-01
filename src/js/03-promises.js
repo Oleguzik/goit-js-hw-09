@@ -33,6 +33,7 @@ function onPromiseFormSubmit(e) {
       })
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
-      });
+      })
+      .finally(() => formRef.reset());
   }
 }
